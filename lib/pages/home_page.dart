@@ -25,9 +25,8 @@ class _HomePageState extends State<HomePage> {
   final Completer<GoogleMapController> _mapCompleter = Completer();
   LatLng? _markedLocation;
 
-
   // Initialize the state of the home page by setting the default address
-  // to the Dufferin Mall, Toronto, Cananda 
+  // to the Dufferin Mall, Toronto, Cananda
   @override
   void initState() {
     super.initState();
@@ -49,7 +48,6 @@ class _HomePageState extends State<HomePage> {
         return;
       }
     }
-
 
     PermissionStatus permissionStatus = await location.hasPermission();
     if (permissionStatus == PermissionStatus.denied) {
@@ -98,9 +96,9 @@ class _HomePageState extends State<HomePage> {
               ),
               markers: {
                 Marker(
+                  markerId: const MarkerId("currentLocation"),
                   position:
                       _markedLocation ?? const LatLng(43.675820, -79.433020),
-                  markerId: const MarkerId("currentLocation"),
                   infoWindow: InfoWindow(title: defaultAddress),
                 ),
               },
