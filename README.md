@@ -1,16 +1,8 @@
 # schoolms
+A code implementation for the design being shared via mail
 
-A new Flutter project.
+* Design Image
+![schoolms](https://github.com/majorsigma/schoolms/assets/79959682/cc8652dc-85df-4c7e-ba81-e062e80d78d3)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Implemantation Image
+![Screenshot_1694123350](https://github.com/majorsigma/schoolms/assets/79959682/96845747-53be-4969-a595-c30b87c0c33d)
