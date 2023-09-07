@@ -1,3 +1,8 @@
+//**
+// This is a custom slider for the homepage. When slide to the right, the
+// user is online, and when slide to the left, the user is offline.
+// */
+
 import 'package:flutter/material.dart';
 import 'package:schoolms/utils/schoolms_colors.dart';
 
@@ -11,11 +16,11 @@ class OnlineSlider extends StatefulWidget {
 class _OnlineSliderState extends State<OnlineSlider> {
   double _left = 0.0;
   bool _isOnline = false;
+  late Size _size;
 
   final _dragContainerKey = GlobalKey();
 
-  late Size _size;
-
+  // builds the slider using the drag container
   @override
   Widget build(BuildContext context) {
     return Container(

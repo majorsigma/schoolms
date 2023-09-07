@@ -25,6 +25,9 @@ class _HomePageState extends State<HomePage> {
   final Completer<GoogleMapController> _mapCompleter = Completer();
   LatLng? _markedLocation;
 
+
+  // Initialize the state of the home page by setting the default address
+  // to the Dufferin Mall, Toronto, Cananda 
   @override
   void initState() {
     super.initState();
@@ -38,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   // Resolve location by first checking if location service is enabled
   // and then requesting permission from the user
   Future<void> _resolveLocation() async {
-    _logger.d("Requesting permission");
+    // request for location service permission
     _isLocationServiceEnabled = await location.serviceEnabled();
     if (!_isLocationServiceEnabled) {
       _isLocationServiceEnabled = await location.requestService();
@@ -46,6 +49,7 @@ class _HomePageState extends State<HomePage> {
         return;
       }
     }
+
 
     PermissionStatus permissionStatus = await location.hasPermission();
     if (permissionStatus == PermissionStatus.denied) {
@@ -76,6 +80,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  // Builds the widget tree for the home page
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,3 +1,8 @@
+//**
+//  This is a custom bottom naviation bar for the home page
+//  built to be resuable.
+// */
+
 import 'package:flutter/material.dart';
 import 'package:schoolms/utils/schoolms_colors.dart';
 
@@ -13,8 +18,10 @@ class SchoolMsBottomNavigationBar extends StatefulWidget {
 
 class _SchoolMsBottomNavigationBarState
     extends State<SchoolMsBottomNavigationBar> {
+  // Initialized the current index of the bottom navigation bar
   int currentIndex = 0;
 
+  //  Icons array to be displayed on the bottom navigation bar
   final List<Icon> navigationIcons = [
     const Icon(Icons.home),
     const Icon(Icons.notifications),
